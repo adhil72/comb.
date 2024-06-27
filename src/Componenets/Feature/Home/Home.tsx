@@ -7,7 +7,7 @@ import Image from "next/image";
 import Logo from "../Logo/Logo";
 import { IoLogoWebComponent } from "react-icons/io5";
 import { RiNpmjsFill } from "react-icons/ri";
-import { BsCode } from "react-icons/bs";
+import { BsArrowDownCircleFill, BsCode } from "react-icons/bs";
 import CodeDiv from "@/Componenets/Common/CodeDiv";
 
 const code = `import Button from "./Button";
@@ -22,21 +22,27 @@ export default function Test() {
 
 export default function Home() {
     return <Container className="w-full">
-        <Flex className="lg:h-screen flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
-            <Box className="w-full lg:w-1/2 mt-10 lg:mt-0">
-                <Box className="text-start">
-                    <span className="text-3xl md:text-6xl font-extrabold">Uncover the Perfect Component</span> <br />
-                    <span className="text-xl md:text-4xl font-semibold">Tailored Solutions for Your Unique Requirements</span>
-                    <Button className="mt-5 w-full text-center md:w-fit">discover components</Button>
-                </Box>
-            </Box>
-            <Box className="w-full lg:w-1/2 mt-32 lg:mt-0">
-                <Flex className="justify-end">
-                    <Box className="w-full h-3/4 rounded-3xl overflow-hidden">
-                        <img src={"https://img.uxcel.com/tags/user-interface-ui-components-1707764923906-2x.jpg"} alt="Cover" className="w-full h-full" />
+        <Flex className="flex-col justify-center">
+            <Flex className="lg:h-screen items-center flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
+                <Box className="w-full lg:w-1/2 mt-10 lg:mt-0">
+                    <Box className="text-start">
+                        <span className="text-3xl md:text-6xl font-extrabold">Uncover the Perfect Component</span> <br />
+                        <span className="text-xl md:text-4xl font-semibold">Tailored Solutions for Your Unique Requirements</span>
+                        <Button className="mt-5 w-full text-center md:w-fit">discover components</Button>
                     </Box>
-                </Flex>
-            </Box>
+                </Box>
+                <Box className="w-full lg:w-1/2 mt-32 lg:mt-0">
+                    <Flex className="justify-end">
+                        <Box className="w-full h-3/4 rounded-3xl overflow-hidden">
+                            <img src={"https://img.uxcel.com/tags/user-interface-ui-components-1707764923906-2x.jpg"} alt="Cover" className="w-full h-full" />
+                        </Box>
+                    </Flex>
+                </Box>
+            </Flex>
+            <Flex className="mt-[-8vh] items-center flex-col hidden lg:flex">
+                <BsArrowDownCircleFill className="text-2xl mt-1 text-tint" />
+                <span className="text-tint">See how it works</span>
+            </Flex>
         </Flex>
         <Flex className="flex-col py-10">
             <span className="text-tint uppercase font-extrabold">components</span>
@@ -45,7 +51,7 @@ export default function Home() {
             </span>
             <span className="text-secondary"><Logo className="!font-normal" /> provides diffrent methods to use its library </span>
 
-            <Flex className="justify-between flex-col md:flex-row mt-5">
+            <Flex className="justify-between flex-col md:flex-row mt-5 items-center">
                 <Flex className="w-full md:w-1/2 flex-col md:mr-2 xl:mr-10">
                     <Flex className="items-center border-[1px] border-tint-dark bg-tint bg-opacity-10 p-4 rounded-xl w-full ">
                         <Box className="p-2 bg-secondary rounded-full ml-5">
