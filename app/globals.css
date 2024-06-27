@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+}
+
+* {
+    transition: 0.2s;
+    scroll-behavior: smooth;
+}
+
+span.bg-gradient-to-r {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes scaleInOut {
+
+    0%,
+    100% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.scale-button {
+    transition: transform 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.scale-button:active {
+    animation: scaleInOut 0.4s;
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.scrollable-div {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1373D1 rgba(245, 245, 245, 0);
+}
