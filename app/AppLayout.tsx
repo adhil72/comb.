@@ -1,8 +1,9 @@
 "use client";
 
 import AppBar from "@/Componenets/Feature/AppBar/AppBar";
-import {AppContext, AppContextType} from "./AppContext";
-import React, {useEffect, useMemo} from "react";
+import { AppContext, AppContextType } from "./AppContext";
+import React, { useEffect, useMemo } from "react";
+import Footer from "@/Componenets/Feature/Footer/Footer";
 
 export default function AppLayout(props: React.HTMLAttributes<HTMLBodyElement>) {
 
@@ -12,9 +13,10 @@ export default function AppLayout(props: React.HTMLAttributes<HTMLBodyElement>) 
 
     return <>
         <AppContext.Provider value={ContextData}>
-            <body {...props} className={"bg-primary text-primary"}>
-            <AppBar/>
-            {props.children}
+            <body {...props} className={"bg-primary text-primary w-full h-screen overflow-auto"}>
+                <AppBar />
+                {props.children}
+                <Footer />
             </body>
         </AppContext.Provider>
     </>
