@@ -47,7 +47,7 @@ export default function Button({ className, unselectable = "on", variant = "cont
             ref={ref}
             unselectable={unselectable}
             {...props}
-            className={`${variant === "contained" ? solidButton : variant === "outlined" ? outlinedButton : textButton} font-bold uppercase`}
+            className={`${variant === "contained" ? solidButton : variant === "outlined" ? outlinedButton : textButton} font-bold uppercase flex items-center justify-center trans`}
             style={{ userSelect: "none" }} // Add this line
         ></div>
     );

@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import Button from "@/Componenets/Common/Button";
 
 export default function AppBar() {
-    return <Box className={"bg-secondary w-full backdrop-blur-[10px] bg-opacity-65 fixed"}>
+    return <Box className={"bg-secondary w-full backdrop-blur-[10px] bg-opacity-65"}>
         <Box className="py-5 flex justify-center md:justify-evenly items-center">
             <Flex>
                 <Logo className="text-3xl" />

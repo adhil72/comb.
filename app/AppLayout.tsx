@@ -2,21 +2,25 @@
 
 import AppBar from "@/Componenets/Feature/AppBar/AppBar";
 import { AppContext, AppContextType } from "./AppContext";
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Footer from "@/Componenets/Feature/Footer/Footer";
+import Components, { IComponent } from "@/Constants/Components";
 
 export default function AppLayout(props: React.HTMLAttributes<HTMLBodyElement>) {
 
+    const [selectedComponent, setSelectedComponent] = useState<IComponent>(Components[0]);
+
     const ContextData: AppContextType = useMemo(() => {
-        return {}
-    }, [])
+        return {
+            selectedComponent,
+            setSelectedComponent
+        }
+    }, [selectedComponent, selectedComponent])
 
     return <>
         <AppContext.Provider value={ContextData}>
             <body {...props} className={"bg-primary text-primary w-full h-screen overflow-auto"}>
-                <AppBar />
                 {props.children}
-                <Footer />
             </body>
         </AppContext.Provider>
     </>
