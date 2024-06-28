@@ -27,6 +27,7 @@ const config: Config = {
       animation: {
         scale: 'scale 0.3s ease-in-out infinite',
         translate: 'translate 1s ease-in-out infinite',
+        slideLeft: 'slideLeft 1s ease-in-out infinite'
       },
       keyframes: {
         scale: {
@@ -41,6 +42,14 @@ const config: Config = {
             transform: 'translateX(110%)'
           }
         },
+        slideLeft: {
+          '0%': {
+            transform: 'translateX(0)',
+          },
+          '100%': {
+            transform: 'translateX(-100%)'
+          }
+        }
       },
     },
   },

@@ -3,9 +3,6 @@
 import Page from "@/Componenets/Common/Page";
 import Library from "@/Componenets/Feature/Library/Library";
 import { IComponent } from "@/Constants/Components";
-import Toast from "@/Library/Toast";
-import CircularProgressSample from "@/samples/CircularProgress";
-import LinearProgressSample from "@/samples/LinearProgress";
 import ToastSample from "@/samples/Toast";
 
 const component: IComponent = {
