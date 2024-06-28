@@ -13,11 +13,14 @@ export default function Layout({
 }>) {
 
     const [selectedComponent, setSelectedComponent] = useState<ISidebarButton>()
+    const [openSidebar, setOpenSidebar] = useState(false)
 
     const contextData = useMemo(() => ({
         selectedSidebarButton: selectedComponent,
-        setSelectedSidebarButton: setSelectedComponent
-    }), [selectedComponent, setSelectedComponent])
+        setSelectedSidebarButton: setSelectedComponent,
+        openSidebar,
+        setOpenSidebar
+    }), [selectedComponent, setSelectedComponent, openSidebar, setOpenSidebar])
 
     return <Flex>
         <LibraryContext.Provider value={contextData}>

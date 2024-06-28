@@ -16,11 +16,12 @@ export default function Sidebar() {
     const path = usePathname();
     const router = useRouter();
 
-    const { selectedSidebarButton, setSelectedSidebarButton } = useContext(LibraryContext);
+    const { selectedSidebarButton, setSelectedSidebarButton, openSidebar, setOpenSidebar } = useContext(LibraryContext);
 
     const handleButtonClick = (button: ISidebarButton) => {
         if (setSelectedSidebarButton) setSelectedSidebarButton(button);
         router.push(button.path);
+        setOpenSidebar(false);
     }
 
     useEffect(() => {
@@ -28,9 +29,9 @@ export default function Sidebar() {
         if (selected && setSelectedSidebarButton) setSelectedSidebarButton(selected);
     }, [path])
 
-    return <Flex className="w-[15%] flex-col fixed">
-        <Flex className="w-full h-screen text-start">
-            <Flex className="w-full bg-secondary backdrop-blur-[100px] bg-opacity-85 z-10 flex-col py-4 px-4 overflow-auto">
+    return <Flex onClick={() => setOpenSidebar(false)} className={`trans ${openSidebar ? "w-full" : "w-0"} overflow-x-hidden cursor-pointer lg:flex lg:w-[15%] flex-col fixed z-20 bg-black lg:bg-none bg-opacity-30`}>
+        <Flex className="w-[40%] lg:w-full h-screen text-start cursor-default">
+            <Flex onClick={(e) => e.stopPropagation()} className="w-full bg-secondary backdrop-blur-[100px] bg-opacity-85 z-10 flex-col py-4 px-4 overflow-auto">
                 <span className="text-3xl text-primary font-extrabold">Library</span>
                 <Flex className="p-2 bg-white bg-opacity-10 rounded-full items-center text-sm mt-2">
                     <BsSearch className="mx-3" />
@@ -45,7 +46,7 @@ export default function Sidebar() {
                 </Box>
 
             </Flex>
-            <Box className="w-32 h-screen bg-tint absolute z-0 " />
+            <Box className="w-[30%] h-screen bg-tint absolute z-0 " />
         </Flex>
     </Flex>
 }
