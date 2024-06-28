@@ -6,9 +6,9 @@ interface ButtonProps extends HTMLAttributes<HTMLDivElement> {
 
 export default function Button({ className, unselectable = "on", variant = "contained", ...props }: ButtonProps) {
 
-    const solidButton = `bg-tint text-white px-5 py-3 rounded-xl cursor-pointer hover:bg-opacity-90 ${className}`;
-    const outlinedButton = `border border-tint text-tint px-5 py-3 rounded-xl cursor-pointer bg-tint bg-opacity-0 hover:bg-opacity-10 ${className}`;
-    const textButton = `text-tint bg-tint bg-opacity-0 px-5 py-3 cursor-pointer hover:bg-opacity-10 rounded-xl ${className}`;
+    const solidButton = `bg-tint text-white px-3 py-2 rounded-xl cursor-pointer hover:bg-opacity-90 ${className}`;
+    const outlinedButton = `border border-tint text-tint px-3 py-2 rounded-xl cursor-pointer bg-tint bg-opacity-0 hover:bg-opacity-10 ${className}`;
+    const textButton = `text-tint bg-tint bg-opacity-0 px-3 py-2 cursor-pointer hover:bg-opacity-10 rounded-xl ${className}`;
     const ref = React.createRef<HTMLDivElement>();
 
     useEffect(() => {

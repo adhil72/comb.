@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       backgroundColor: {
         'primary': '#000000',
+        "primary-light": "#121212",
         'secondary': '#121212',
         'tint': '#0703fc',
         'tint-alt': "#1373D1",

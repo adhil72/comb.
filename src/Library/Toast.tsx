@@ -83,7 +83,7 @@ export const createToast = ({ message, title, duration = 3000, type = "default" 
     toastLayout.appendChild(toast);
 
     setTimeout(() => {
-        toast.classList.remove("h-0");
+        toast.classList.remove("h-0","translate-x-full");
         toast.classList.add("translate-x-0", "opacity-100");
     }, 0);
 
