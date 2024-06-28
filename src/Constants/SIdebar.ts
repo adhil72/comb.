@@ -13,8 +13,8 @@ const sidebarButtons: ISidebarButton[] = [
     { title: "AppBar", path: "/library/appbar" },
     { title: "Modal", path: "/library/modal" },
     { title: "Sidebar", path: "/library/sidebar" },
-    { title: "Tabs", path: "/library/tabs" },
     { title: "Tooltip", path: "/library/tooltip" },
+    { title: "Gradient text", path: "/library/gradient/text" },
 ]
 
 export { sidebarButtons }
