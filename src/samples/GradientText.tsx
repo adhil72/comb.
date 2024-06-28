@@ -1,7 +1,9 @@
-import GradientText from "@/Library/GradientText";
+import React from "react";
 
-export default function GradientTextSample(){
-    return <div className="flex items-center justify-center">
-        <GradientText color1="red" className="text-3xl font-extrabold">Gradient Text</GradientText>
+
+export default function GradientTextSample() {
+
+    return <div>
+        <span className={`bg-gradient-to-r from-tint to-tint-alt bg-clip-text text-transparent font-extrabold text-3xl`}>Sample text</span>
     </div>
 }

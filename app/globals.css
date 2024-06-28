@@ -15,10 +15,7 @@ body {
     transition: 0.1s ease-in-out;
 }
 
-span.bg-gradient-to-r {
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 @keyframes scaleInOut {
 
