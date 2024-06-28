@@ -23,7 +23,25 @@ const config: Config = {
       },
       borderColor: {
         primary: "#0703fc"
-      }
+      },
+      animation: {
+        scale: 'scale 0.3s ease-in-out infinite',
+        translate: 'translate 1s ease-in-out infinite',
+      },
+      keyframes: {
+        scale: {
+          '0%, 100%': { transform: 'scale(0)' },
+          '50%': { transform: 'scale(1)' },
+        },
+        translate: {
+          '0%': {
+            transform: 'translateX(-110%)',
+          },
+          '100%': {
+            transform: 'translateX(110%)'
+          }
+        },
+      },
     },
   },
   plugins: [],
