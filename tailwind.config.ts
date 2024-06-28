@@ -7,19 +7,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundColor:{
+      backgroundColor: {
         'primary': '#000000',
         'secondary': '#121212',
-        'tint':'#0703fc',
-        'tint-alt':"#1373D1",
-        'tint-dark':'rgb(2 0 137)',
+        'tint': '#0703fc',
+        'tint-alt': "#1373D1",
+        'tint-dark': 'rgb(2 0 137)',
       },
-      colors:{
+      colors: {
         'primary': '#ffffff',
         'secondary': 'grey',
-        'tint':'#0703fc',
-        'tint-alt':"#1373D1",
-        'tint-dark':'rgb(2 0 137)',
+        'tint': '#0703fc',
+        'tint-alt': "#1373D1",
+        'tint-dark': 'rgb(2 0 137)',
+      },
+      borderColor: {
+        primary: "#0703fc"
       }
     },
   },

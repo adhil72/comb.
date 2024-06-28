@@ -40,6 +40,20 @@ export default function Button({ className, unselectable = "on", variant = "cont
                 ref.current.classList.remove("bg-opacity-20");
             }
         });
+
+        ref.current.addEventListener('mouseleave', () => {
+            if (ref.current === null) return;
+            if (variant === "contained") {
+                ref.current.classList.add("hover:bg-opacity-90");
+                ref.current.classList.remove("bg-opacity-70");
+            } else if (variant === "outlined") {
+                ref.current.classList.add("hover:bg-opacity-10");
+                ref.current.classList.remove("bg-opacity-20");
+            } else {
+                ref.current.classList.add("hover:bg-opacity-10");
+                ref.current.classList.remove("bg-opacity-20");
+            }
+        });
     })
 
     return (

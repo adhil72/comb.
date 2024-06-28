@@ -6,25 +6,27 @@ import IconBox from "@/Componenets/Common/IconBox";
 import Logo from "../../Logo/Logo";
 import { BsSearch } from "react-icons/bs";
 import Button from "@/Componenets/Common/Button";
-import { useEffect, useState } from "react";
-import Components from "@/Constants/Components";
+import { useContext, useEffect, useState } from "react";
 import { useParams, usePathname, useRouter } from "next/navigation";
-
-const sidebarButtons: { title: string, path: string }[] = [
-    { title: "Button", path: "/library/button" },
-    { title: "Container", path: "/library/container" },
-]
+import { ISidebarButton, sidebarButtons } from "@/Constants/SIdebar";
+import { LibraryContext } from "../../../../../app/library/context";
 
 export default function Sidebar() {
 
-    const [selectedComponent, setSelectedComponent] = useState(sidebarButtons[0])
     const path = usePathname();
+    const router = useRouter();
+
+    const { selectedSidebarButton, setSelectedSidebarButton } = useContext(LibraryContext);
+
+    const handleButtonClick = (button: ISidebarButton) => {
+        if (setSelectedSidebarButton) setSelectedSidebarButton(button);
+        router.push(button.path);
+    }
 
     useEffect(() => {
         const selected = sidebarButtons.find(button => button.path === path);
-        if (selected) setSelectedComponent(selected);
+        if (selected && setSelectedSidebarButton) setSelectedSidebarButton(selected);
     }, [path])
-
 
     return <Flex className="w-[15%] flex-col fixed">
         <Flex className="w-full h-screen text-start">
@@ -38,7 +40,7 @@ export default function Sidebar() {
 
                 <Box className="h-[100%] overflow-y-auto scrollable-div text-start">
                     {
-                        sidebarButtons?.map((button, index) => <a href={button.path}><Button variant={button.title === selectedComponent.title ? "contained" : "text"} className={`!text-primary !normal-case !font-semibold !justify-start mt-2`}>{button.title}</Button></a>)
+                        sidebarButtons?.map((button, index) => <Button onClick={() => handleButtonClick(button)} variant={button.title === selectedSidebarButton?.title ? "contained" : "text"} className={`!text-primary !normal-case !font-semibold !justify-start mt-2`}>{button.title}</Button>)
                     }
                 </Box>
 

@@ -8,7 +8,7 @@ export interface IComponent {
 }
 
 const Components: IComponent[] = [
-    
+
 ]
 
 export default Components
