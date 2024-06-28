@@ -17,7 +17,7 @@ export default function AppBar({ logo, links, button }: Props) {
             </Flex>
             <Flex className={"w-[80%] md:w-[30%] justify-evenly hidden md:flex"}>
                 {
-                    links?.map(link => <a href={link.path} className={"text-primary text-lg"}>{link.title}</a>)
+                    links?.map((link, index) => <a key={index} href={link.path} className={"text-primary text-lg"}>{link.title}</a>)
                 }
             </Flex>
             <Flex>
