@@ -13,11 +13,11 @@ const data: IComponent = {
     description: " Container is a simple component that is used to wrap other components. It is used to provide padding and margin to the components. It is also used to provide a background color to the components.",
     codes: [
         {
-            fileName: "Button usage",
+            fileName: "Container usage",
             code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Container.tsx",
         },
         {
-            fileName: "Button.tsx",
+            fileName: "Container.tsx",
             code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Container.tsx"
         }
     ],
