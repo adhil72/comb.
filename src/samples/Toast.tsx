@@ -1,19 +1,12 @@
 import Button from "@/Library/Button";
+import Grid from "@/Library/Grid";
 import { createToast } from "@/Library/Toast";
-import { useState } from "react";
 
 export default function ToastSample() {
-
-    const [openDefault, setOpenDefault] = useState(false);
-    const [openSuccess, setOpenSuccess] = useState(false);
-    const [openError, setOpenError] = useState(false);
-    const [openWarning, setOpenWarning] = useState(false);
-
-    return <>
-
-        <Button onClick={() => { createToast({ title: "Profile updated", message: "Your profile has been updated successfully", type: "default" }) }} className="mr-2">Default</Button>
-        <Button onClick={() => { createToast({ title: "Success", message: "Your profile has been updated successfully", type: "success" }) }} className="mr-2">Success</Button>
-        <Button onClick={() => { createToast({ title: "Error", message: "Failed to update your profile", type: "error" }) }} className="mr-2">Error</Button>
-        <Button onClick={() => { createToast({ title: "Warning", message: "Your profile has been updated successfully", type: "warning" }) }} className="mr-2">Warning</Button>
-    </>
+    return <Grid autoArrangement arrangementFormula="2-4-6-8" className="gap-10 w-full">
+        <Button className="bg-green-700" onClick={() => createToast({ title: "Success", message: "This is a success message", type: "success" })}>Success</Button>
+        <Button className="bg-red-700" onClick={() => createToast({ title: "Error", message: "This is an error message", type: "error" })}>Error</Button>
+        <Button className="bg-yellow-600" onClick={() => createToast({ title: "Warning", message: "This is a warning message", type: "warning" })}>Warning</Button>
+        <Button onClick={() => createToast({ title: "Default", message: "This is a default message" })}>Default</Button>
+    </Grid>
 }
