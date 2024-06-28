@@ -91,7 +91,7 @@ export default function Home() {
                                 <Button className="w-full text-center mr-1">Click me</Button>
                             </Flex>
                             <Box className="p-4">
-                                <Box className="bg-primary w-full rounded-xl overflow-hidden">
+                                <Box className="bg-primary w-full h-[30vh] rounded-xl overflow-hidden">
                                     <CodeDiv url={code} />
                                 </Box>
                             </Box>

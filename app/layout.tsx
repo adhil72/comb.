@@ -6,8 +6,8 @@ import AppLayout from "./AppLayout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adhil",
-  description: "Adhil's portfolio website",
+  title: "Comb.",
+  description: "Talwind components library",
 };
 
 export default function RootLayout({
