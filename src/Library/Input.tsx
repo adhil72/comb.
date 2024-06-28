@@ -12,7 +12,7 @@ const focusedTypes = [
     "date", "time"
 ]
 
-export default function Input({ label, labelProps, inputProps, type = "text", variant = "outlined", ...layoutProps }: Props) {
+export default function Input({ label, labelProps, inputProps, type = "text", value, defaultValue, variant = "outlined", ...layoutProps }: Props) {
 
     const labelRef = React.useRef<HTMLDivElement>(null)
     const inputRef = React.useRef<HTMLInputElement>(null)
@@ -45,7 +45,7 @@ export default function Input({ label, labelProps, inputProps, type = "text", va
     }
 
     useEffect(() => {
-        if (focusedTypes.includes(type)) adjustLabelMargin()
+        if (focusedTypes.includes(type) || defaultValue) adjustLabelMargin()
     }, [])
 
     return <div
@@ -59,6 +59,8 @@ export default function Input({ label, labelProps, inputProps, type = "text", va
         >{label}
         </span>
         <input
+            value={value ? value : undefined}
+            defaultValue={defaultValue ? defaultValue : undefined}
             ref={inputRef}
             onBlur={handleOnInputBlurred}
             onFocus={handleOnInputFocused}
