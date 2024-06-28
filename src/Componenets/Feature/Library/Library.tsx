@@ -36,10 +36,10 @@ export default function Library(props: { data: IComponent }) {
                     <AppBar />
                 </Flex>
                 <Container className="py-10 lg:!px-20 flex flex-col">
-                    <span className="text-4xl font-extrabold">{props.data.title}</span>
+                    <span className="text-4xl font-extrabold mb-10">{props.data.title}</span>
                     {
                         data.details.map((detail, index) => <Box key={index}>
-                            <span className="text-2xl font-semibold mt-5">{detail.subTitle}</span>
+                            <span className="text-2xl font-semibold mt-5">{detail.subTitle}</span> <br />
                             <span className="!text-secondary mt-2">
                                 <Logo className="!font-normal" />{detail.description}
                             </span>
