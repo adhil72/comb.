@@ -17,7 +17,7 @@ const component: IComponent = {
             codes: [
                 {
                     fileName: "GradientText.tsx",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/GradientText.tsx"
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/GradientText.tsx"
                 }
             ],
             preview: <GradientTextSample />
