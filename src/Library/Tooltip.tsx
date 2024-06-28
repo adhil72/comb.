@@ -21,8 +21,8 @@ const Tooltip: React.FC<Props> = ({ title, children, ...rest }) => {
         if (!tooltipRef.current || !contentRef.current) return;
         const tooltip = tooltipRef.current;
         const content = contentRef.current;
-        let my = content.offsetHeight
-        tooltip.style.marginTop = `-${my + 10}px`
+        let my = content.clientHeight + content.clientHeight;
+        tooltip.style.marginTop = `-${my - 5}px`
     })
 
     return (
