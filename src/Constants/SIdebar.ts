@@ -8,6 +8,7 @@ const sidebarButtons: ISidebarButton[] = [
     { title: "Container", path: "/library/container" },
     { title: "Inputs", path: "/library/inputs" },
     { title: "Progress", path: "/library/progress" },
+    { title: "Grid", path: "/library/grid" },
 ]
 
 export { sidebarButtons }
