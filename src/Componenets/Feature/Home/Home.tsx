@@ -29,7 +29,7 @@ export default function Home() {
                             <Button onClick={()=>router.push("/library/button")} className="mt-5 w-full text-center md:w-fit">discover components</Button>
                         </Box>
                     </Box>
-                    <Box className="w-full lg:w-1/2 lg:mt-0">
+                    <Box className="w-full lg:w-1/2 mt-20 lg:mt-0">
                         <Flex className="justify-end">
                             <Box className="w-full h-3/4 rounded-3xl overflow-hidden">
                                 <Image src={"/images/cover.png"} className="!static" alt="Cover" layout="fill" />
