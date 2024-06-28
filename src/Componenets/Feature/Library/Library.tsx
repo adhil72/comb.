@@ -53,8 +53,7 @@ export default function Library(props: { data: IComponent }) {
                                             <span className="font-semibold">{fileName}</span>
                                         </Flex>
                                         <Flex className="pr-4">
-                                            <Button variant="text" className="text-tint" onClick={() => copyToClipboard(code)}>copy</Button>
-                                            <Button variant="text" className="text-tint"><IoLogoGithub className="text-2xl mr-2" /> View on github</Button>
+                                            <Button onClick={() => window.open(code)} variant="text" className="text-tint"><IoLogoGithub className="text-2xl mr-2" /> View on github</Button>
                                         </Flex>
                                     </Flex>
                                     <Box className="w-full h-[1px] bg-tint-dark mb-2 bg-opacity-30"></Box>

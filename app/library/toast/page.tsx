@@ -6,7 +6,7 @@ import { IComponent } from "@/Constants/Components";
 import ToastSample from "@/samples/Toast";
 
 const component: IComponent = {
-    title: "Toast",
+    title: "Modal",
     details: [
         {
             subTitle: "",
@@ -14,11 +14,11 @@ const component: IComponent = {
             codes: [
                 {
                     fileName: "Toast usage",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Toast.tsx",
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Modal.tsx",
                 },
                 {
                     fileName: "Toast.tsx",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Toast.tsx"
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Modal.tsx"
                 }
             ],
             preview: <ToastSample />

@@ -11,28 +11,22 @@ import { BsArrowDownCircleFill, BsCode } from "react-icons/bs";
 import CodeDiv from "@/Componenets/Common/CodeDiv";
 import AppBar from "../AppBar/AppBar";
 import Footer from "../Footer/Footer";
-
-const code = `import Button from "./Button";
-
-export default function Test() {
-    return <div className="flex">
-        <Button variant="text" className="w-full text-center ml-1">Click me</Button>
-        <Button variant="outlined" className="w-full text-center mx-1">Click me</Button>
-        <Button className="w-full text-center mr-1">Click me</Button>
-    </div>
-}`
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+    const router = useRouter();
+
     return <>
-        <AppBar />
+        <AppBar fixed/>
         <Container className="w-full">
             <Flex className="flex-col justify-center">
-                <Flex className="lg:h-[98vh] items-center flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
+                <Flex className="lg:h-screen items-center flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
                     <Box className="w-full lg:w-1/2 mt-10 lg:mt-0">
                         <Box className="text-start">
                             <span className="text-3xl md:text-6xl font-extrabold">Uncover the Perfect Component</span> <br />
                             <span className="text-xl md:text-4xl font-semibold">Tailored Solutions for Your Unique Requirements</span>
-                            <Button className="mt-5 w-full text-center md:w-fit">discover components</Button>
+                            <Button onClick={()=>router.push("/library/button")} className="mt-5 w-full text-center md:w-fit">discover components</Button>
                         </Box>
                     </Box>
                     <Box className="w-full lg:w-1/2 lg:mt-0">
@@ -91,8 +85,8 @@ export default function Home() {
                                 <Button className="w-full text-center mr-1">Click me</Button>
                             </Flex>
                             <Box className="p-4">
-                                <Box className="bg-primary w-full h-[30vh] rounded-xl overflow-hidden">
-                                    <CodeDiv url={code} />
+                                <Box className="bg-primary w-full rounded-xl overflow-hidden">
+                                    <CodeDiv url={"https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Button.tsx"} />
                                 </Box>
                             </Box>
                         </Box>

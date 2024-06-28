@@ -3,8 +3,8 @@ import Flex from "@/Componenets/Common/Flex";
 import Logo from "../Logo/Logo";
 import Button from "@/Componenets/Common/Button";
 
-export default function AppBar() {
-    return <Box className={"bg-secondary w-full backdrop-blur-[10px] bg-opacity-65"}>
+export default function AppBar({ fixed = false }: { fixed?: boolean }) {
+    return <Box className={`bg-secondary ${fixed && "fixed"} w-full backdrop-blur-[10px] bg-opacity-65`}>
         <Box className="py-5 flex justify-center md:justify-evenly items-center">
             <Flex>
                 <Logo className="text-3xl" />

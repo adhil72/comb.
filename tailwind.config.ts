@@ -14,7 +14,6 @@ const config: Config = {
         'tint': '#0703fc',
         'tint-alt': "#1373D1",
         'tint-dark': 'rgb(2 0 137)',
-        'red': '#ffffff',
       },
       colors: {
         'primary': '#ffffff',
@@ -22,7 +21,6 @@ const config: Config = {
         'tint': '#0703fc',
         'tint-alt': "#1373D1",
         'tint-dark': 'rgb(2 0 137)',
-        'red': '#ffffff'
       },
       borderColor: {
         primary: "#0703fc"
