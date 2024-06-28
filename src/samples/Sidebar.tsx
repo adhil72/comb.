@@ -17,5 +17,6 @@ export default function SidebarSample() {
 
     return <div className="w-96 h-[50vh]">
         <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} selectedSidebarButton={selectedSidebarButton} sidebarButtons={sidebarButtons} />
+        <img src="/images/sidebar.png" className="lg:hidden" />
     </div>
 }
