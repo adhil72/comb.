@@ -12,11 +12,11 @@ const component: IComponent = {
     codes: [
         {
             fileName: "Button usage",
-            code: "https://raw.githubusercontent.com/adhil72/my-portfolio/main/src/Components/Common/Button.tsx",
+            code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Button.tsx",
         },
         {
             fileName: "Button.tsx",
-            code: "https://raw.githubusercontent.com/adhil72/my-portfolio/main/src/Components/Common/Button.tsx"
+            code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Button.tsx"
         }
     ],
     preview: <ButtonSample />

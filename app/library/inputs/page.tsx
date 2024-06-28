@@ -6,6 +6,7 @@ import RawText from "@/Componenets/Common/RawText";
 import Library from "@/Componenets/Feature/Library/Library";
 import { IComponent } from "@/Constants/Components";
 import Input from "@/Library/Input";
+import InputsSample from "@/samples/Inputs";
 
 const component: IComponent = {
     title: "Inputs",
@@ -20,10 +21,7 @@ const component: IComponent = {
             code: "https://raw.githubusercontent.com/adhil72/my-portfolio/main/src/Components/Common/Button.tsx"
         }
     ],
-    preview: <div className="flex w-full justify-center">
-        <Input className="mr-2" variant="outlined" label="Email" type="email" />
-        <Input className="ml-2" variant="solid" label="Email" type="email" />
-    </div>
+    preview: <InputsSample />
 }
 export default function Index() {
     return <Page>
