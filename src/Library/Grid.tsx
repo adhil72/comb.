@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 interface GridProps extends React.HTMLAttributes<HTMLDivElement> {
     autoArrangement?: boolean;
-    arrangementFormula?: "1-2-4-6" | "1-3-6-9" | "2-4-6-8" | "2-3-4-5" | "1-2-3-4" | "1-2-3-6" | "1-2-4-6" | "1-3-4-6" | "1-3-4-8" | "1-3-6-8" | "1-4-6-8" | "2-4-6-9";
+    arrangementFormula?: "1-2-4-6" | "1-3-6-9" | "2-4-6-8" | "2-3-4-5" | "1-2-3-4" | "1-2-3-6" | "1-2-4-6" | "1-3-4-6" | "1-3-4-8" | "1-3-6-8" | "1-4-6-8" | "2-4-6-9" | "2-2-4-6";
 }
 
 export default function Grid({ autoArrangement, arrangementFormula = "1-2-4-6", ...props }: GridProps) {
 
-    const [arrangement, setArrangement] = useState("");
+    const [arrangement, setArrangement] = useState("grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8");
 
     useEffect(() => {
         if (autoArrangement) {
