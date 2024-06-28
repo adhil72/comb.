@@ -4,6 +4,7 @@ import Page from "@/Componenets/Common/Page";
 import Library from "@/Componenets/Feature/Library/Library";
 import { IComponent } from "@/Constants/Components";
 import CircularProgress from "@/Library/CircularProgress";
+import CircularProgressSample from "@/samples/CircularProgress";
 import InputSample from "@/samples/Input";
 
 const component: IComponent = {
@@ -22,7 +23,7 @@ const component: IComponent = {
                     code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/CircularProgress.tsx"
                 }
             ],
-            preview: <CircularProgress />
+            preview: <CircularProgressSample />
         }
     ]
 }
