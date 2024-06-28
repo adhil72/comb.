@@ -27,7 +27,7 @@ export default function Home() {
         <AppBar />
         <Container className="w-full">
             <Flex className="flex-col justify-center">
-                <Flex className="lg:h-screen items-center flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
+                <Flex className="lg:h-[98vh] items-center flex-col-reverse lg:justify-normal lg:items-center lg:flex-row">
                     <Box className="w-full lg:w-1/2 mt-10 lg:mt-0">
                         <Box className="text-start">
                             <span className="text-3xl md:text-6xl font-extrabold">Uncover the Perfect Component</span> <br />
@@ -35,10 +35,10 @@ export default function Home() {
                             <Button className="mt-5 w-full text-center md:w-fit">discover components</Button>
                         </Box>
                     </Box>
-                    <Box className="w-full lg:w-1/2 mt-32 lg:mt-0">
+                    <Box className="w-full lg:w-1/2 lg:mt-0">
                         <Flex className="justify-end">
                             <Box className="w-full h-3/4 rounded-3xl overflow-hidden">
-                                <img src={"https://img.uxcel.com/tags/user-interface-ui-components-1707764923906-2x.jpg"} alt="Cover" className="w-full h-full" />
+                                <Image src={"/images/cover.png"} className="!static" alt="Cover" layout="fill" />
                             </Box>
                         </Flex>
                     </Box>
@@ -92,7 +92,7 @@ export default function Home() {
                             </Flex>
                             <Box className="p-4">
                                 <Box className="bg-primary w-full rounded-xl overflow-hidden">
-                                    <CodeDiv code={code} />
+                                    <CodeDiv url={code} />
                                 </Box>
                             </Box>
                         </Box>

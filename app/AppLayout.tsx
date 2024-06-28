@@ -15,7 +15,7 @@ export default function AppLayout(props: React.HTMLAttributes<HTMLBodyElement>) 
             selectedComponent,
             setSelectedComponent
         }
-    }, [selectedComponent, selectedComponent])
+    }, [selectedComponent, setSelectedComponent])
 
     return <>
         <AppContext.Provider value={ContextData}>

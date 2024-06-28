@@ -40,7 +40,7 @@ export default function Sidebar() {
 
                 <Box className="h-[100%] overflow-y-auto scrollable-div text-start">
                     {
-                        sidebarButtons?.map((button, index) => <Button onClick={() => handleButtonClick(button)} variant={button.title === selectedSidebarButton?.title ? "contained" : "text"} className={`!text-primary !normal-case !font-semibold !justify-start mt-2`}>{button.title}</Button>)
+                        sidebarButtons?.map((button, index) => <Button key={index} onClick={() => handleButtonClick(button)} variant={button.title === selectedSidebarButton?.title ? "contained" : "text"} className={`!text-primary !normal-case !font-semibold !justify-start mt-2`}>{button.title}</Button>)
                     }
                 </Box>
 
