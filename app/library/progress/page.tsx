@@ -15,11 +15,11 @@ const component: IComponent = {
             codes: [
                 {
                     fileName: "Input usage",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Input.tsx",
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/CircularProgress.tsx",
                 },
                 {
                     fileName: "Input.tsx",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Input.tsx"
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/CircularProgress.tsx"
                 }
             ],
             preview: <CircularProgress />
