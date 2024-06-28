@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://combdot.vercel.app/</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/button</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/container</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/inputs</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/progress</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/grid</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/toast</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/appbar</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/modal</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/sidebar</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/tooltip</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://combdot.vercel.app/library/gradient/text</loc>
+    <lastmod>2024-06-28T13:04:14+00:00</lastmod>
+  </url>
+</urlset>
