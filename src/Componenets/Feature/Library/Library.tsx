@@ -37,29 +37,34 @@ export default function Library(props: { data: IComponent }) {
                 </Flex>
                 <Container className="py-10 lg:!px-20 flex flex-col">
                     <span className="text-4xl font-extrabold">{props.data.title}</span>
-                    <span className="!text-secondary mt-2">
-                        <Logo className="!font-normal" />{props.data.description}
-                    </span>
-                    <Flex className="mt-10 justify-center">
-                        {props.data.preview}
-                    </Flex>
-                    {data.codes.map(({ code, fileName }, index) => (
-                        <Box key={index} className="bg-secondary rounded-xl mt-10 pb-3">
-                            <Flex className="justify-between p-2 items-center">
-                                <Flex className="pl-4">
-                                    <span className="font-semibold">{fileName}</span>
-                                </Flex>
-                                <Flex className="pr-4">
-                                    <Button variant="text" className="text-tint" onClick={() => copyToClipboard(code)}>copy</Button>
-                                    <Button variant="text" className="text-tint"><IoLogoGithub className="text-2xl mr-2" /> View on github</Button>
-                                </Flex>
+                    {
+                        data.details.map((detail, index) => <Box key={index}>
+                            <span className="text-2xl font-semibold mt-5">{detail.subTitle}</span>
+                            <span className="!text-secondary mt-2">
+                                <Logo className="!font-normal" />{detail.description}
+                            </span>
+                            <Flex className="mt-10 justify-center">
+                                {detail.preview}
                             </Flex>
-                            <Box className="w-full h-[1px] bg-tint-dark mb-2 bg-opacity-30"></Box>
-                            <Box className="mx-4 bg-black rounded-2xl overflow-hidden">
-                                <CodeDiv url={code} />
-                            </Box>
+                            {detail.codes.map(({ code, fileName }, index) => (
+                                <Box key={index} className="bg-secondary rounded-xl mt-10 pb-3">
+                                    <Flex className="justify-between p-2 items-center">
+                                        <Flex className="pl-4">
+                                            <span className="font-semibold">{fileName}</span>
+                                        </Flex>
+                                        <Flex className="pr-4">
+                                            <Button variant="text" className="text-tint" onClick={() => copyToClipboard(code)}>copy</Button>
+                                            <Button variant="text" className="text-tint"><IoLogoGithub className="text-2xl mr-2" /> View on github</Button>
+                                        </Flex>
+                                    </Flex>
+                                    <Box className="w-full h-[1px] bg-tint-dark mb-2 bg-opacity-30"></Box>
+                                    <Box className="mx-4 bg-black rounded-2xl overflow-hidden p-3">
+                                        <CodeDiv url={code} />
+                                    </Box>
+                                </Box>
+                            ))}
                         </Box>
-                    ))}
+                        )}
                 </Container>
             </Flex>
         </Flex>

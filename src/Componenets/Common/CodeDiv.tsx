@@ -25,7 +25,7 @@ export default function CodeDiv({ url, ...props }: React.HTMLProps<HTMLDivElemen
 
     return (
         <div {...props} className="bg-inherit w-full">
-            <pre className="!bg-inherit" style={{ overflow: 'auto', whiteSpace: 'pre-wrap' }}>
+            <pre className="!bg-inherit overflow-auto max-h-[30vh]" >
                 <code ref={codeRef} className="language-jsx !bg-inherit">
                     {code}
                 </code>

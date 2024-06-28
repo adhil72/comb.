@@ -10,18 +10,23 @@ import ContainerSample from "@/samples/Container";
 
 const data: IComponent = {
     title: "Container",
-    description: " Container is a simple component that is used to wrap other components. It is used to provide padding and margin to the components. It is also used to provide a background color to the components.",
-    codes: [
+    details: [
         {
-            fileName: "Container usage",
-            code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Container.tsx",
-        },
-        {
-            fileName: "Container.tsx",
-            code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Container.tsx"
+            subTitle: "",
+            description: " Container is a simple component that is used to wrap other components. It is used to provide padding and margin to the components. It is also used to provide a background color to the components.",
+            codes: [
+                {
+                    fileName: "Container usage",
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Container.tsx",
+                },
+                {
+                    fileName: "Container.tsx",
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Container.tsx"
+                }
+            ],
+            preview: <ContainerSample />
         }
-    ],
-    preview: <ContainerSample />
+    ]
 }
 export default function Index() {
     return <Page>
