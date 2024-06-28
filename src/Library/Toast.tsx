@@ -7,8 +7,6 @@ interface Props {
     title: string;
     message: string;
     type?: "success" | "error" | "warning" | "default";
-    open?: boolean;
-    close?: () => void;
 }
 
 const createToastContainer = () => {
@@ -50,7 +48,7 @@ const themes: { bg: string, text: string, "progress-dark": string, "progress-tin
     }
 ]
 
-export const createToast = ({ message, title, close, duration = 3000, open, type = "default" }: Props) => {
+export const createToast = ({ message, title, duration = 3000, type = "default" }: Props) => {
     let toastLayout = document.getElementById("toast-layout");
     if (!toastLayout) toastLayout = createToastContainer();
 
@@ -68,7 +66,7 @@ export const createToast = ({ message, title, close, duration = 3000, open, type
     toast.appendChild(progress);
 
     const toastContainer = document.createElement("div");
-    toastContainer.className = "w-[400px] p-5";
+    toastContainer.className = "md:w-[400px] p-5";
 
     const toastTitle = document.createElement("span");
     toastTitle.className = "text-xl font-bold text-primary";
