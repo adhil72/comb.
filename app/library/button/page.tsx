@@ -4,6 +4,7 @@ import Button from "@/Componenets/Common/Button";
 import Page from "@/Componenets/Common/Page";
 import Library from "@/Componenets/Feature/Library/Library";
 import { IComponent } from "@/Constants/Components";
+import ButtonSample from "@/samples/Button";
 
 const component: IComponent = {
     title: "Button",
@@ -18,11 +19,7 @@ const component: IComponent = {
             code: "https://raw.githubusercontent.com/adhil72/my-portfolio/main/src/Components/Common/Button.tsx"
         }
     ],
-    preview: <div className="flex justify-center">
-        <Button variant="text" className="w-60 text-center ml-5">Click me</Button>
-        <Button variant="outlined" className="w-60 text-center mx-5">Click me</Button>
-        <Button className="w-60 text-center mr-5">Click me</Button>
-    </div>
+    preview: <ButtonSample />
 }
 export default function Index() {
     return <Page>
