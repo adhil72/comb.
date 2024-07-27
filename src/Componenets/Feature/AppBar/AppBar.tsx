@@ -10,10 +10,10 @@ export default function AppBar({ fixed = false }: { fixed?: boolean }) {
                 <Logo className="text-3xl" />
             </Flex>
             <Flex className={"w-[80%] md:w-[30%] justify-evenly hidden md:flex"}>
-                <a href={"/"} className={"text-primary text-lg"}>Home</a>
-                <a href={"/about"} className={"text-primary text-lg"}>About</a>
-                <a href={"/projects"} className={"text-primary text-lg"}>Projects</a>
-                <a href={"/contact"} className={"text-primary text-lg"}>Contact</a>
+                {/* <a href={"/"} className={"text-primary text-lg"}>Home</a> */}
+                {/* <a href={"/about"} className={"text-primary text-lg"}>About</a> */}
+                {/* <a href={"/projects"} className={"text-primary text-lg"}>Projects</a> */}
+                {/* <a href={"/contact"} className={"text-primary text-lg"}>Contact</a> */}
             </Flex>
             <Flex>
                 <Button className={"!py-2 !px-5 hidden md:block"} variant="outlined">Contribute</Button>
