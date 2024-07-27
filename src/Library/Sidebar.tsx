@@ -15,11 +15,12 @@ interface Props {
     setOpenSidebar: any;
     itemClick?: (button: any) => void;
     sidebarButtons: ISidebarButton[];
+    disableResponsive?: boolean;
 }
 
-export default function Sidebar({ selectedSidebarButton, openSidebar, setOpenSidebar, itemClick, sidebarButtons }: Props) {
-    return <Flex onClick={() => setOpenSidebar(false)} className={`trans ${openSidebar ? "w-full" : "w-0"} h-full overflow-x-hidden cursor-pointer lg:flex lg:w-[100%] flex-col z-20 bg-black lg:bg-none bg-opacity-30`}>
-        <Flex className="w-[40%] lg:w-full h-full text-start cursor-default">
+export default function Sidebar({ selectedSidebarButton, openSidebar, setOpenSidebar, itemClick, sidebarButtons, disableResponsive }: Props) {
+    return <Flex onClick={() => setOpenSidebar(false)} className={`trans ${!disableResponsive && openSidebar ? "w-full" : "w-0"} h-full overflow-x-hidden cursor-pointer ${disableResponsive ? "flex" : "lg:flex"} ${disableResponsive ? "w-[100%]" : "lg:w-[100%]"} flex-col z-20 bg-black lg:bg-none bg-opacity-30`}>
+        <Flex className={`${!disableResponsive && "w-[40%]"} ${disableResponsive?"w-full":"lg:w-full"} h-full text-start cursor-default`}>
             <Flex onClick={(e) => e.stopPropagation()} className="w-full bg-secondary backdrop-blur-[100px] bg-opacity-85 z-10 flex-col py-4 px-4 overflow-auto">
                 <span className="text-3xl text-primary font-extrabold">Library</span>
                 <Flex className="p-2 bg-white bg-opacity-10 rounded-full items-center text-sm mt-2">

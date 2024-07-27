@@ -14,11 +14,11 @@ const component: IComponent = {
             codes: [
                 {
                     fileName: "Toast usage",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Toast.tsx",
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/samples/Modal.tsx",
                 },
                 {
                     fileName: "Toast.tsx",
-                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Toast.tsx"
+                    code: "https://raw.githubusercontent.com/adhil72/comb./main/src/Library/Modal.tsx"
                 }
             ],
             preview: <ModalSample />

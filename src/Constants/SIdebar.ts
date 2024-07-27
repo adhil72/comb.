@@ -15,6 +15,7 @@ const sidebarButtons: ISidebarButton[] = [
     { title: "Sidebar", path: "/library/sidebar" },
     { title: "Tooltip", path: "/library/tooltip" },
     { title: "Gradient text", path: "/library/gradient/text" },
+    { title: "Menu", path: "/library/menu" },
 ]
 
 export { sidebarButtons }

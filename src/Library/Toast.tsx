@@ -1,7 +1,3 @@
-import { TiTick } from "react-icons/ti";
-import CircularProgress from "@/Library/CircularProgress";
-import { use, useEffect, useState } from "react";
-
 interface Props {
     duration?: number;
     title: string;
